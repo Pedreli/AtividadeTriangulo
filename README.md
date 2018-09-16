@@ -1,4 +1,4 @@
-# AtividadeTriangulo
+# AtividadeTriangulo - Felipe Pedreli
 # Complexidade Ciclomática
 
 É uma métrica de software usada para indicar a complexidade de um programa de computador. A complexidade ciclomática pode ser aplicada a funções, módulos, métodos ou classes individuais de um programa. Basicamente, é a contagem de "nós predicados", ou seja, comandos que criam desvio no fluxo natural do processamento. Porque tais comandos criam novos caminhos, aumentando a complexidade do código fonte.

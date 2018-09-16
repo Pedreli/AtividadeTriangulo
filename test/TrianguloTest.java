@@ -5,10 +5,6 @@
  */
 
 import atividadetriangulo.Triangulo;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -28,9 +24,61 @@ public class TrianguloTest {
         
         for (String propriedade : t.getPropriedades()) {
             if (i == 1){
-                assertEquals("Válidos", propriedade);
+                assertEquals("Válido", propriedade);
             }else if (i == 2){
                 assertEquals("Equilátero", propriedade);
+            }
+            
+            i ++;
+        }
+    }
+    
+     @Test
+    public void TestTrianguloIsósceles() {
+        Triangulo t = new Triangulo(5, 5, 3);
+        int i = 1;
+        
+        for (String propriedade : t.getPropriedades()) {
+            if (i == 1){
+                assertEquals("Válido", propriedade);
+            }else if (i == 2){
+                assertEquals("Isósceles", propriedade);
+            }
+            
+            i ++;
+        }
+    }
+    
+     @Test
+    public void TestTrianguloEscaleno() {
+        Triangulo t = new Triangulo(5, 8, 7);
+        int i = 1;
+        
+        // invertido as ordens da propriedade pois o objeto Set trazem ordem diferente 
+        for (String propriedade : t.getPropriedades()) {
+            if (i == 1){
+                assertEquals("Escaleno", propriedade);
+            }else if (i == 2){
+                assertEquals("Válido", propriedade);
+            }
+            
+            i ++;
+        }
+    }
+    
+     @Test
+    public void TestTrianguloRetângulo() {
+        Triangulo t = new Triangulo(5, 4, 3);
+        int i = 1;
+        
+        // invertido as ordens da propriedade pois o objeto Set trazem ordem diferente 
+        for (String propriedade : t.getPropriedades()) {
+            if (i == 1){
+                assertEquals("Escaleno", propriedade);
+            }else if (i == 2){
+                assertEquals("Válido", propriedade);
+            }else if (i == 3){
+                assertEquals("Retângulo", propriedade);
             }
             
             i ++;
